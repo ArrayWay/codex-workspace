@@ -1,0 +1,3018 @@
+{
+  "safe": [
+    {
+      "Name": "Current User Temp",
+      "Type": "directory_contents",
+      "Path": "%TEMP%",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Local Temp",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Temp",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Temp",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\Temp",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Update Download Cache",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\SoftwareDistribution\\Download",
+      "Risk": "Low",
+      "RiskNote": "windows_update_cache"
+    },
+    {
+      "Name": "Delivery Optimization Cache",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\Microsoft\\Windows\\DeliveryOptimization\\Cache",
+      "Risk": "Low",
+      "RiskNote": "windows_update_cache"
+    },
+    {
+      "Name": "Thumbnail and Icon Cache",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Windows\\Explorer"
+      ],
+      "Include": [
+        "thumbcache_*.db",
+        "iconcache*",
+        "ThumbCacheToDelete*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "thumbnail_cache"
+    },
+    {
+      "Name": "Crash Dumps",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\CrashDumps",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Windows Error Reports (Current User)",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Microsoft\\Windows\\WER",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Windows Error Reports (ProgramData)",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\Microsoft\\Windows\\WER",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "DirectX Shader Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\D3DSCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "NVIDIA GL Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\NVIDIA\\GLCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "NVIDIA DX Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\NVIDIA\\DXCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "NVIDIA Compute Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\NVIDIA\\ComputeCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "AMD DX Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\AMD\\DxCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "AMD Vulkan Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\AMD\\VkCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "Intel Shader Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Intel\\ShaderCache",
+      "Risk": "Low",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "Windows INetCache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Microsoft\\Windows\\INetCache",
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "UWP INetCache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\*\\AC\\INetCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "UWP TempState",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\*\\TempState"
+      ],
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "UWP AC Temp",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\*\\AC\\Temp"
+      ],
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "UWP LocalCache Temp and Cache Directories",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\*\\LocalCache\\Temp",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalCache\\Cache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalCache\\INetCache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalCache\\TemporaryState"
+      ],
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Remote Desktop Bitmap Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Microsoft\\Terminal Server Client\\Cache",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Font Cache",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Store LocalCache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\LocalCache",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Store TempState",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\TempState",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Store INetCache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\AC\\INetCache",
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Windows Store Temp Files",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\AC\\Temp",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Microsoft Edge WebView2 Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\Cache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\Code Cache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\GPUCache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\Service Worker\\CacheStorage",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\Media Cache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\DawnCache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\GrShaderCache",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\*\\ShaderCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Observed UWP EBWebView Cache Round 17",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\Default\\Cache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\Default\\Code Cache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\Default\\GPUCache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\Default\\Service Worker\\CacheStorage",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\Default\\Media Cache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\GrShaderCache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\ShaderCache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\DawnCache",
+        "%LOCALAPPDATA%\\Packages\\*\\LocalState\\EBWebView\\component_crx_cache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Electron App Cache (Common)",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Code\\Cache",
+        "%APPDATA%\\Code\\CachedData",
+        "%APPDATA%\\Code\\GPUCache",
+        "%APPDATA%\\Code\\Service Worker\\CacheStorage",
+        "%APPDATA%\\Cursor\\Cache",
+        "%APPDATA%\\Cursor\\CachedData",
+        "%APPDATA%\\Cursor\\GPUCache",
+        "%APPDATA%\\Cursor\\Service Worker\\CacheStorage",
+        "%APPDATA%\\Discord\\Cache",
+        "%APPDATA%\\Discord\\Code Cache",
+        "%APPDATA%\\Discord\\GPUCache",
+        "%APPDATA%\\Discord\\Service Worker\\CacheStorage",
+        "%APPDATA%\\Slack\\Cache",
+        "%APPDATA%\\Slack\\Code Cache",
+        "%APPDATA%\\Slack\\GPUCache",
+        "%APPDATA%\\Slack\\Service Worker\\CacheStorage"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Windows Notification Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Microsoft\\Windows\\Notifications",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows CDN Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Microsoft\\Windows\\Caches",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "ProgramData Temp",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\Temp",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Windows Update Orchestrator Logs",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\USOShared\\Logs",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Windows Defender Scan Cache",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\Microsoft\\Windows Defender\\Scans\\History\\Store",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Windows Defender Support Logs",
+      "Type": "directory_contents",
+      "Path": "%ProgramData%\\Microsoft\\Windows Defender\\Support",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Windows Installer Residual Logs",
+      "Type": "file_pattern",
+      "Paths": [
+        "%WINDIR%\\Temp"
+      ],
+      "Include": [
+        "MSI*.log",
+        "MSI*.tmp",
+        "MSP*.log"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Windows Diagnostic Logs",
+      "Type": "file_pattern",
+      "Paths": [
+        "%ProgramData%\\Microsoft\\Diagnosis"
+      ],
+      "Include": [
+        "*.etl",
+        "*.log",
+        "*.log.*",
+        "*.cab",
+        "*.rbs",
+        "*.etl.*",
+        "*.dmp",
+        "*.tmp"
+      ],
+      "Recurse": true,
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Microsoft Store Install Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Microsoft\\Windows\\AppRepository\\Logs",
+        "%ProgramData%\\Microsoft\\Windows\\AppRepository\\Temp"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Outlook Diagnostics and Logging",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Temp\\Outlook Logging",
+        "%LOCALAPPDATA%\\Microsoft\\Outlook\\Logging"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Edge WebView2 Crash Reports",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\Crashpad\\reports",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeWebView\\User Data\\Crashpad\\pending"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Browser Updater Logs and Residual Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\GoogleUpdater\\log",
+        "%LOCALAPPDATA%\\Google\\Update\\Log",
+        "%ProgramData%\\Google\\Update\\Log",
+        "%LOCALAPPDATA%\\Microsoft\\EdgeUpdate\\Log",
+        "%ProgramData%\\Microsoft\\EdgeUpdate\\Log",
+        "%LOCALAPPDATA%\\BraveSoftware\\Update\\Log"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Browser Extension and Component Residual Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\SwReporter",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Extension Rules",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Extension Scripts",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Extension Rules",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Extension Scripts",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Extension Rules",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Extension Scripts"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Browser Component Updater Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Component Updater\\Download",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\OptimizationGuidePredictionModels",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Component Updater\\Download",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\OptimizationGuidePredictionModels",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Component Updater\\Download",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\OptimizationGuidePredictionModels",
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\minidumps"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Observed Chrome and Edge Model/Component Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\component_crx_cache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\optimization_guide_model_store",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\SODALanguagePacks",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\SODA",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\WasmTtsEngine",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\component_crx_cache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\ProvenanceData",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\ProvenanceDataTensors",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\EdgeLanguageDetectionModel",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Speech Recognition"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Chromium Browser Cache (All Profiles)",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Cache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Code Cache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\GPUCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Cache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Code Cache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\GPUCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Cache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Code Cache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\GPUCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Firefox Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\cache2",
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\startupCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Chromium Service Worker Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Service Worker\\CacheStorage",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Service Worker\\CacheStorage",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Service Worker\\CacheStorage"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Observed Chromium Service Worker Script Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Service Worker\\ScriptCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Service Worker\\ScriptCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Service Worker\\ScriptCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Chromium Derived Media and Shader Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Media Cache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\DawnCache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\GrShaderCache",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\ShaderCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Media Cache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\DawnCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\GrShaderCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\ShaderCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Media Cache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\DawnCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\GrShaderCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\ShaderCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Firefox Derived Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\thumbnails",
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\shader-cache",
+        "%LOCALAPPDATA%\\Mozilla\\Firefox\\Profiles\\*\\jumpListCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Chromium Crashpad Reports",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Crashpad\\reports",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Crashpad\\reports",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\Crashpad\\reports"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Chromium Browser Crash and Recovery Artifacts",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Crashpad\\pending",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\DawnWebGPUCache",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Crashpad\\pending",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\DawnWebGPUCache",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\Crashpad\\pending",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\DawnWebGPUCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Chromium Profile Optimization and Segmentation Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\OptimizationHints",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\*\\Segmentation Platform",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\OptimizationHints",
+        "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\*\\Segmentation Platform",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\OptimizationHints",
+        "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\*\\Segmentation Platform"
+      ],
+      "Risk": "Low",
+      "RiskNote": "browser_cache"
+    },
+    {
+      "Name": "Windows Minidumps",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\Minidump",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Windows Live Kernel Reports",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\LiveKernelReports",
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Windows Memory Dump Files",
+      "Type": "file_pattern",
+      "Paths": [
+        "%WINDIR%"
+      ],
+      "Include": [
+        "MEMORY.DMP",
+        "MEMORY.HDMP"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Panther Logs",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\Panther",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "CBS Persist Logs",
+      "Type": "file_pattern",
+      "Paths": [
+        "%WINDIR%\\Logs\\CBS"
+      ],
+      "Include": [
+        "CbsPersist_*.log",
+        "CbsPersist_*.cab"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "DISM Logs",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\Logs\\DISM",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Windows Setup Logs",
+      "Type": "directory_contents",
+      "Path": "%WINDIR%\\Logs\\MoSetup",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Windows Store Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\LocalState\\DiagOutputDir",
+        "%LOCALAPPDATA%\\Packages\\Microsoft.WindowsStore_8wekyb3d8bbwe\\TempState\\DiagOutputDir"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Downloads Partial Files",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.crdownload",
+        "*.part",
+        "*.partial",
+        "*.tmp"
+      ],
+      "Recurse": true,
+      "Risk": "Low",
+      "RiskNote": "partial_downloads"
+    },
+    {
+      "Name": "Zero-byte Temporary Files",
+      "Type": "file_pattern",
+      "Paths": [
+        "%TEMP%",
+        "%LOCALAPPDATA%\\Temp",
+        "%WINDIR%\\Temp",
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*"
+      ],
+      "Recurse": true,
+      "ZeroByteOnly": true,
+      "Risk": "Low",
+      "RiskNote": "empty_files"
+    },
+    {
+      "Name": "Empty Folders in Temporary Areas",
+      "Type": "empty_directories",
+      "Paths": [
+        "%TEMP%",
+        "%LOCALAPPDATA%\\Temp",
+        "%WINDIR%\\Temp",
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Risk": "Low",
+      "RiskNote": "empty_folders"
+    }
+  ],
+  "advanced": [
+    {
+      "Name": "Steam HTML Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Steam\\htmlcache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Spotify Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Spotify\\Data",
+      "Risk": "Low",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Teams Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Microsoft\\Teams\\Cache",
+        "%APPDATA%\\Microsoft\\Teams\\Code Cache",
+        "%APPDATA%\\Microsoft\\Teams\\GPUCache",
+        "%APPDATA%\\Microsoft\\Teams\\Service Worker\\CacheStorage",
+        "%LOCALAPPDATA%\\Packages\\MSTeams_8wekyb3d8bbwe\\LocalCache\\Microsoft\\MSTeams\\EBWebView\\Cache",
+        "%LOCALAPPDATA%\\Packages\\MSTeams_8wekyb3d8bbwe\\LocalCache\\Microsoft\\MSTeams\\EBWebView\\Code Cache",
+        "%LOCALAPPDATA%\\Packages\\MSTeams_8wekyb3d8bbwe\\LocalCache\\Microsoft\\MSTeams\\EBWebView\\GPUCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Telegram Cache",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Telegram Desktop\\tdata\\user_data\\cache",
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "QQ Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\QQ\\*\\ImageCache",
+        "%APPDATA%\\Tencent\\QQ\\*\\AudioCache",
+        "%APPDATA%\\Tencent\\QQ\\*\\FileRecv\\Temp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "npm Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\npm-cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Yarn Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Yarn\\Cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "NuGet HTTP Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\NuGet\\v3-cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "pip Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\pip\\Cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "pnpm Store",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\pnpm\\store",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Playwright Browser Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\ms-playwright",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Gradle Cache",
+      "Type": "directory_contents",
+      "Path": "%USERPROFILE%\\.gradle\\caches",
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "JetBrains IDE Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\JetBrains\\*\\caches",
+        "%LOCALAPPDATA%\\JetBrains\\*\\tmp",
+        "%LOCALAPPDATA%\\JetBrains\\*\\log"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Android Studio Gradle and AVD Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%USERPROFILE%\\.android\\cache",
+        "%USERPROFILE%\\.android\\avd\\*\\snapshots\\default_boot",
+        "%USERPROFILE%\\.android\\adb.log"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": ".NET NuGet Temp Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%TEMP%\\NuGetScratch",
+        "%LOCALAPPDATA%\\Temp\\NuGetScratch"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Python uv Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\uv\\cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Maven Repository Cache",
+      "Type": "directory_contents",
+      "Path": "%USERPROFILE%\\.m2\\repository",
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "sbt and Ivy Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%USERPROFILE%\\.ivy2\\cache",
+        "%USERPROFILE%\\.sbt\\boot",
+        "%USERPROFILE%\\.sbt\\1.0\\dependency"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Android Emulator Temp Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Temp\\AndroidEmulator",
+        "%LOCALAPPDATA%\\Temp\\GoogleAndroidEmulator",
+        "%USERPROFILE%\\.android\\cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Docker Desktop Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Docker\\log",
+        "%APPDATA%\\Docker\\tmp",
+        "%LOCALAPPDATA%\\Docker\\log.txt",
+        "%LOCALAPPDATA%\\Docker\\panels"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Epic Games Launcher Web Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\EpicGamesLauncher\\Saved\\webcache*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Battle.net Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Battle.net\\Agent\\BrowserCache",
+        "%LOCALAPPDATA%\\Battle.net\\BrowserCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Ubisoft Connect Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Ubisoft Game Launcher\\cache",
+        "%LOCALAPPDATA%\\Ubisoft Game Launcher\\cache\\avatars"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "EA App Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Electronic Arts\\EA Desktop\\Cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Steam Shader Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramFiles(x86)%\\Steam\\steamapps\\shadercache",
+        "%ProgramFiles%\\Steam\\steamapps\\shadercache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "shader_cache"
+    },
+    {
+      "Name": "GOG Galaxy Web Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\GOG.com\\Galaxy\\webcache",
+        "%PROGRAMDATA%\\GOG.com\\Galaxy\\webcache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "qBittorrent BT Backup Temp",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\qBittorrent\\BT_backup\\temp",
+        "%APPDATA%\\qBittorrent\\BT_backup\\temp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Baidu Netdisk Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\BaiduNetdisk\\users\\*\\cache",
+        "%LOCALAPPDATA%\\BaiduNetdisk\\users\\*\\temp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Adobe Camera Raw Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Adobe\\CameraRaw\\Cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Adobe Common Media Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Adobe\\Common\\Media Cache",
+        "%APPDATA%\\Adobe\\Common\\Media Cache Files",
+        "%APPDATA%\\Adobe\\Common\\Peak Files"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Adobe Lightroom Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Adobe\\Lightroom\\Caches",
+        "%APPDATA%\\Adobe\\Lightroom\\Caches"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Office File Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Office\\16.0\\OfficeFileCache",
+        "%LOCALAPPDATA%\\Microsoft\\Office\\15.0\\OfficeFileCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "OneDrive Setup Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\setup\\logs",
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\logs"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Autodesk Desktop App Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Autodesk\\Web Services",
+        "%LOCALAPPDATA%\\Autodesk\\Autodesk Desktop App\\Cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Autodesk Identity and Installer Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Autodesk\\Identity Services\\Logs",
+        "%LOCALAPPDATA%\\Autodesk\\ODIS\\logs",
+        "%ProgramData%\\Autodesk\\ODIS\\logs"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Zoom Cache and Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Zoom\\data\\WebviewCache",
+        "%APPDATA%\\Zoom\\logs",
+        "%APPDATA%\\Zoom\\bin\\logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "OBS Studio Cache and Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\obs-studio\\logs",
+        "%APPDATA%\\obs-studio\\crashes",
+        "%APPDATA%\\obs-studio\\plugin_config\\obs-browser\\Cache",
+        "%APPDATA%\\obs-studio\\plugin_config\\obs-browser\\Code Cache",
+        "%APPDATA%\\obs-studio\\plugin_config\\obs-browser\\GPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Autodesk Material and Web Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Autodesk\\Material Library",
+        "%LOCALAPPDATA%\\Autodesk\\Web Services\\Cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Blender Cache and Crash Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Blender Foundation\\Blender\\*\\cache",
+        "%LOCALAPPDATA%\\Temp\\blender*",
+        "%APPDATA%\\Blender Foundation\\Blender\\*\\crash.txt"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Microsoft Teams Logs and Meeting Add-in Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Microsoft\\Teams\\logs.txt",
+        "%APPDATA%\\Microsoft\\Teams\\meeting-addin\\Cache",
+        "%APPDATA%\\Microsoft\\Teams\\Service Worker\\ScriptCache"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "OneDrive Update and Telemetry Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\Update\\Logs",
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\Telemetry"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Unity Package and Shader Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Unity\\Asset Store-5.x",
+        "%LOCALAPPDATA%\\Unity\\cache",
+        "%APPDATA%\\Unity\\ShaderCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Unreal Engine Derived Data Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\UnrealEngine\\Common\\DerivedDataCache",
+        "%LOCALAPPDATA%\\UnrealEngine\\*\\Saved\\Logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Android SDK Temp and Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Android\\Sdk\\temp",
+        "%LOCALAPPDATA%\\Android\\Sdk\\.cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Visual Studio Installer and Component Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Microsoft\\VisualStudio\\Packages\\_Instances",
+        "%ProgramData%\\Microsoft\\VisualStudio\\Packages\\_Channels",
+        "%ProgramData%\\Microsoft\\VisualStudio\\Setup\\Logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "AIMP and VLC Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\AIMP\\Cache",
+        "%APPDATA%\\vlc\\art"
+      ],
+      "Risk": "Low",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "VSCode and VSCodium Extension/Crash Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Code\\CachedExtensionVSIXs",
+        "%APPDATA%\\Code\\Crashpad\\reports",
+        "%APPDATA%\\Code\\Crashpad\\pending",
+        "%APPDATA%\\Code\\Service Worker\\ScriptCache",
+        "%APPDATA%\\Code - Insiders\\CachedExtensionVSIXs",
+        "%APPDATA%\\Code - Insiders\\Crashpad\\reports",
+        "%APPDATA%\\Code - Insiders\\Crashpad\\pending",
+        "%APPDATA%\\VSCodium\\CachedExtensionVSIXs",
+        "%APPDATA%\\VSCodium\\Crashpad\\reports",
+        "%APPDATA%\\VSCodium\\Crashpad\\pending"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "JetBrains Shared Index and VFS Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\JetBrains\\Shared\\vfs",
+        "%LOCALAPPDATA%\\JetBrains\\Shared\\indexes"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Node and JavaScript Toolchain Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\node-gyp\\Cache",
+        "%LOCALAPPDATA%\\Corepack\\cache",
+        "%LOCALAPPDATA%\\Yarn\\Berry\\cache",
+        "%APPDATA%\\npm-cache\\_logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Python Packaging and Build Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\pypoetry\\Cache",
+        "%APPDATA%\\Python\\pip\\Cache",
+        "%LOCALAPPDATA%\\pip\\Cache\\http-v2",
+        "%LOCALAPPDATA%\\pip\\Cache\\wheels"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Java Wrapper and Native Build Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%USERPROFILE%\\.m2\\wrapper\\dists",
+        "%USERPROFILE%\\.m2\\wrapper\\cache",
+        "%USERPROFILE%\\.gradle\\wrapper\\dists",
+        "%USERPROFILE%\\.gradle\\native"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Adobe Logs and CEP Component Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Adobe\\Logs",
+        "%APPDATA%\\Adobe\\Common\\Logs",
+        "%APPDATA%\\Adobe\\CEP\\logs",
+        "%APPDATA%\\Adobe\\OOBE\\Logs"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Autodesk Access and Genuine Service Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Autodesk\\Autodesk Access\\Cache",
+        "%LOCALAPPDATA%\\Autodesk\\Autodesk Access\\Logs",
+        "%ProgramData%\\Autodesk\\Access\\Logs",
+        "%ProgramData%\\Autodesk\\AdskIdentityManager\\Logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Office Diagnostics and ClickToRun Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Office\\15.0\\Telemetry",
+        "%LOCALAPPDATA%\\Microsoft\\Office\\16.0\\Telemetry",
+        "%ProgramData%\\Microsoft\\Office\\ClickToRun\\Log",
+        "%LOCALAPPDATA%\\Microsoft\\Office\\CLP"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Thunder and Download Tool Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Thunder Network\\Thunder\\Profiles\\TaskDb",
+        "%LOCALAPPDATA%\\Xunlei\\Browser\\Cache",
+        "%LOCALAPPDATA%\\Xunlei\\XLDownload\\Cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "JetBrains Shared Caches and Downloaded Plugins",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\JetBrains\\plugins-sandbox",
+        "%APPDATA%\\JetBrains\\consentOptions",
+        "%LOCALAPPDATA%\\JetBrains\\Shared\\downloadedPlugins",
+        "%LOCALAPPDATA%\\JetBrains\\Shared\\jcef_cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "VSCode Language Server and Workspace Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Code\\User\\workspaceStorage",
+        "%APPDATA%\\Code\\User\\History",
+        "%APPDATA%\\Code - Insiders\\User\\workspaceStorage",
+        "%APPDATA%\\VSCodium\\User\\workspaceStorage"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Python Scientific and Notebook Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%USERPROFILE%\\.jupyter\\runtime",
+        "%APPDATA%\\jupyter\\runtime",
+        "%LOCALAPPDATA%\\pip\\cache",
+        "%LOCALAPPDATA%\\matplotlib"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Java Tooling and IDE Build Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%USERPROFILE%\\.sonarlint",
+        "%USERPROFILE%\\.sts4-cache",
+        "%USERPROFILE%\\.p2",
+        "%USERPROFILE%\\.eclipse\\org.eclipse.platform_*\\configuration"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Visual Studio and Test Platform Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%TEMP%\\VisualStudioTestExplorerExtensions",
+        "%TEMP%\\VSFeedbackIntelliCodeLogs",
+        "%LOCALAPPDATA%\\Microsoft\\VisualStudio\\*\\ActivityLog.xml",
+        "%LOCALAPPDATA%\\Microsoft\\VisualStudio\\*\\ComponentModelCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Adobe Creative Cloud Installer and Update Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Adobe\\AAMUpdater",
+        "%ProgramData%\\Adobe\\OOBE\\PDApp\\core\\logs",
+        "%ProgramData%\\Adobe\\ARM\\logs",
+        "%ProgramData%\\Adobe\\Installer"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Autodesk Installer and Download Residual Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Autodesk\\Installer",
+        "%ProgramData%\\Autodesk\\Downloader",
+        "%LOCALAPPDATA%\\Autodesk\\Autodesk Access\\PackageCache",
+        "%LOCALAPPDATA%\\Autodesk\\ODIS\\PackageCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Office and OneDrive Crash/Diagnostics Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\Office\\UnsavedFiles",
+        "%LOCALAPPDATA%\\Microsoft\\Office\\Spw",
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\crashes",
+        "%LOCALAPPDATA%\\Microsoft\\OneDrive\\StandaloneUpdater\\logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Visual Studio and .NET Build Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Microsoft\\MSBuild\\SdkResolverService",
+        "%LOCALAPPDATA%\\Microsoft\\MSBuild\\15.0\\ProjectAssemblies",
+        "%LOCALAPPDATA%\\Temp\\VBCSCompiler",
+        "%USERPROFILE%\\.templateengine\\dotnetcli"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Android Studio System and Profiler Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\AndroidStudio*\\caches",
+        "%LOCALAPPDATA%\\Google\\AndroidStudio*\\tmp",
+        "%LOCALAPPDATA%\\Google\\AndroidStudio*\\log",
+        "%LOCALAPPDATA%\\Android\\Sdk\\system-images\\.cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "CUDA and NVIDIA Developer Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NV_Cache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\CUDA Samples\\logs",
+        "%ProgramData%\\NVIDIA Corporation\\Downloader",
+        "%ProgramData%\\NVIDIA Corporation\\NetService\\Logs"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Adobe Crash Dumps and GPU Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Adobe\\Common\\Media Cache Files",
+        "%LOCALAPPDATA%\\Adobe\\CrashDump",
+        "%LOCALAPPDATA%\\Adobe\\After Effects\\*\\Disk Cache - MACHINE_*",
+        "%LOCALAPPDATA%\\Adobe\\Premiere Pro\\*\\GPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Office, WPS and Updater Residual Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Kingsoft\\WPS Office\\addonspool\\temp",
+        "%LOCALAPPDATA%\\Kingsoft\\WPS Office\\update",
+        "%ProgramData%\\Kingsoft\\office6\\logs",
+        "%ProgramData%\\Microsoft\\Office\\Telemetry"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Autodesk Crash and CER Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Autodesk\\CER",
+        "%LOCALAPPDATA%\\Autodesk\\AutoCAD *\\R*.*\\enu\\CrashDumps",
+        "%ProgramData%\\Autodesk\\CER"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "NetEase CloudMusic Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\CloudMusic\\Cache",
+      "Risk": "Low",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "NetEase CloudMusic Embedded Web Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\CloudMusic\\webapp91x64\\Cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "NetEase CloudMusic Update Residuals",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\CloudMusic\\update",
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "NetEase CloudMusic NEIM Logs",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\CloudMusic\\NEIM_SYS",
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "NetEase CloudMusic Web Log",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Netease\\CloudMusic"
+      ],
+      "Include": [
+        "web.log",
+        "web.log.*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "NetEase CloudMusic Temp",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\CloudMusic\\Temp",
+      "Risk": "Low",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "NetEase MailMaster Web Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Netease\\MailMaster\\web\\cache",
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Edraw MindMaster QtWebEngine Cache Round 20",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Edraw\\MindMaster\\cache\\QtWebEngine\\Default\\Cache",
+        "%LOCALAPPDATA%\\Edraw\\MindMaster\\QtWebEngine\\Default\\GPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Jianying Cache",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\JianyingPro\\User Data\\Cache",
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "WeChat xwechat log",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Tencent\\xwechat\\log",
+      "Risk": "Medium",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "WeChat xwechat plugins",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Tencent\\xwechat\\xplugin",
+      "Risk": "High",
+      "RiskNote": "redownload_plugins"
+    },
+    {
+      "Name": "WeChat log",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Tencent\\WeChat\\log",
+      "Risk": "Medium",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "WeChat XPlugin",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Tencent\\WeChat\\XPlugin",
+      "Risk": "High",
+      "RiskNote": "redownload_plugins"
+    },
+    {
+      "Name": "Observed WPS Addon Pool Embedded Archives",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\wps\\addons\\pool\\win-i386"
+      ],
+      "Include": [
+        "download.7z",
+        "download.7z.*",
+        "*.kdtmp"
+      ],
+      "Recurse": true,
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed WPS Addon List Metadata",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\wps\\addons\\list",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\listV2"
+      ],
+      "Risk": "Low",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed WPS Addon Download Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\download",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\dl",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\predownload",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\splashupdater_*"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed WPS Embedded Web Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\cef\\cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\cef\\globalcache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\promebrowser\\cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\promeapps\\cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebdocercore\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebdocercore\\wps\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebdocercore\\et\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebdocercore\\wpp\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kbubble\\cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebonlinetaskpane\\wps\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\kwebonlinetaskpane\\pdf\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\docers\\wps\\Cache",
+        "%APPDATA%\\Kingsoft\\wps\\addons\\data\\win-i386\\docers\\wpp\\Cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "WPS download",
+      "Type": "directory_contents",
+      "Path": "%APPDATA%\\Kingsoft\\wps\\download",
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed AI Desktop Chromium Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Codex\\Cache",
+        "%APPDATA%\\Codex\\Code Cache",
+        "%APPDATA%\\Codex\\GPUCache",
+        "%APPDATA%\\Codex\\DawnGraphiteCache",
+        "%APPDATA%\\Codex\\DawnWebGPUCache",
+        "%APPDATA%\\Claude\\Cache",
+        "%APPDATA%\\Claude\\Code Cache",
+        "%APPDATA%\\Claude\\GPUCache",
+        "%APPDATA%\\Claude\\DawnGraphiteCache",
+        "%APPDATA%\\Claude\\DawnWebGPUCache",
+        "%APPDATA%\\CherryStudio\\Cache",
+        "%APPDATA%\\CherryStudio\\Code Cache",
+        "%APPDATA%\\CherryStudio\\GPUCache",
+        "%APPDATA%\\CherryStudio\\DawnGraphiteCache",
+        "%APPDATA%\\CherryStudio\\DawnWebGPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed AI Desktop Crash Reports and Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Codex\\Crashpad\\reports",
+        "%APPDATA%\\Claude\\Crashpad\\reports",
+        "%APPDATA%\\Claude\\logs",
+        "%APPDATA%\\CherryStudio\\Crashpad\\reports",
+        "%APPDATA%\\CherryStudio\\logs"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Chromium-App Cache Round 7",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\Cache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\Code Cache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\GPUCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\DawnGraphiteCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\DawnWebGPUCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\Default\\Service Worker\\ScriptCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\GrShaderCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\ShaderCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\GraphiteDawnCache",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\repair\\cache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\Cache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\Code Cache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\GPUCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\Service Worker\\ScriptCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\DawnGraphiteCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\Default\\DawnWebGPUCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\component_crx_cache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\GrShaderCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\ShaderCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\GraphiteDawnCache",
+        "%LOCALAPPDATA%\\Quark\\User Data\\OptimizationHints",
+        "%APPDATA%\\LarkShell\\GrShaderCache",
+        "%APPDATA%\\LarkShell\\ShaderCache",
+        "%APPDATA%\\BitBrowser\\Cache",
+        "%APPDATA%\\BitBrowser\\Code Cache",
+        "%APPDATA%\\BitBrowser\\GPUCache",
+        "%APPDATA%\\BitBrowser\\DawnWebGPUCache",
+        "%APPDATA%\\BitBrowser\\DawnGraphiteCache",
+        "%APPDATA%\\adspower_global\\Cache",
+        "%APPDATA%\\adspower_global\\Code Cache",
+        "%APPDATA%\\adspower_global\\GPUCache",
+        "%APPDATA%\\adspower_global\\DawnGraphiteCache",
+        "%APPDATA%\\adspower_global\\DawnWebGPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Chromium-App Logs and Crash Reports Round 7",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data\\sdk_storage\\log",
+        "%APPDATA%\\LarkShell\\sdk_storage\\log",
+        "%APPDATA%\\BitBrowser\\logs",
+        "%APPDATA%\\BitBrowser\\Crashpad\\reports",
+        "%APPDATA%\\adspower_global\\logs",
+        "%APPDATA%\\adspower_global\\Crashpad\\reports"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed LarkShell Aha Profile Cache Round 19",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\LarkShell\\aha\\users\\*\\profile_*\\Cache",
+        "%APPDATA%\\LarkShell\\aha\\users\\*\\profile_*\\Code Cache",
+        "%APPDATA%\\LarkShell\\aha\\users\\*\\profile_*\\Service Worker\\CacheStorage",
+        "%APPDATA%\\LarkShell\\aha\\users\\*\\profile_*\\Service Worker\\ScriptCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Chromium-App Metrics and Residual Updaters Round 7",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data",
+        "%LOCALAPPDATA%\\Quark\\User Data",
+        "%APPDATA%\\LarkShell"
+      ],
+      "Include": [
+        "BrowserMetrics",
+        "BrowserMetrics-spare.pma"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed App Updater Residual Cache Round 7",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data\\update_data",
+        "%LOCALAPPDATA%\\Quark\\User Data\\updates",
+        "%LOCALAPPDATA%\\Quark\\User Data\\QianwenInstaller"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Electron and Chromium App Cache Round 8",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\quark-cloud-drive\\Cache",
+        "%APPDATA%\\quark-cloud-drive\\Code Cache",
+        "%APPDATA%\\quark-cloud-drive\\GPUCache",
+        "%APPDATA%\\quark-cloud-drive\\DawnCache",
+        "%APPDATA%\\thunderx\\Cache",
+        "%APPDATA%\\thunderx\\GPUCache",
+        "%APPDATA%\\baidunetdisk\\Cache",
+        "%APPDATA%\\baidunetdisk\\Code Cache",
+        "%APPDATA%\\baidunetdisk\\GPUCache",
+        "%APPDATA%\\baidunetdisk\\DawnCache",
+        "%APPDATA%\\eva\\Cache",
+        "%APPDATA%\\eva\\Code Cache",
+        "%APPDATA%\\eva\\GPUCache",
+        "%APPDATA%\\eva\\DawnGraphiteCache",
+        "%APPDATA%\\eva\\DawnWebGPUCache",
+        "%APPDATA%\\WebCatalog\\photon\\*\\Cache",
+        "%APPDATA%\\WebCatalog\\photon\\*\\Code Cache",
+        "%APPDATA%\\WebCatalog\\photon\\*\\GPUCache",
+        "%APPDATA%\\WebCatalog\\photon\\*\\DawnGraphiteCache",
+        "%APPDATA%\\WebCatalog\\photon\\*\\DawnWebGPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Electron and Chromium App Logs Round 8",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\quark-cloud-drive\\logs",
+        "%APPDATA%\\quark-cloud-drive\\Crashpad\\reports",
+        "%APPDATA%\\baidunetdisk\\Crashpad\\reports",
+        "%APPDATA%\\eva\\logs",
+        "%APPDATA%\\eva\\Crashpad\\reports",
+        "%APPDATA%\\WebCatalog\\photon\\*\\Crashpad\\reports"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Electron and Chromium App Metrics Round 8",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\quark-cloud-drive"
+      ],
+      "Include": [
+        "BrowserMetrics",
+        "BrowserMetrics-spare.pma"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Tencent and Alibaba Log Residuals Round 9",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\Tencent\\Logs",
+        "%ProgramData%\\Alibaba\\AlibabaProtectDT\\Logs"
+      ],
+      "Include": [
+        "*.tlg",
+        "*.tlg.*",
+        "*.log"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed Tencent Media and Web Cache Round 9",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\QQPlayer\\thumbnail",
+        "%APPDATA%\\Tencent\\QQPlayer\\ImageCache",
+        "%APPDATA%\\Tencent\\QQPlayer\\captiontemp",
+        "%APPDATA%\\Tencent\\WeMeet\\Global\\Logs",
+        "%APPDATA%\\Tencent\\WeMeet\\Global\\WebkitCache",
+        "%APPDATA%\\Tencent\\WeMeet\\HummerTemp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Observed Tencent Updater and Patch Residuals Round 9",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Tencent\\WeChat\\patch"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Tencent and NVIDIA Log Residuals Round 10",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\Tencent\\xwechat\\log",
+        "%ProgramData%\\NVIDIA"
+      ],
+      "Include": [
+        "*.xlog",
+        "*.log",
+        "*.log.*",
+        "*.log_backup*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed Tencent xwechat Updater Residuals Round 10",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\xwechat\\update\\patch",
+        "%APPDATA%\\Tencent\\xwechat\\update\\download"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed VSCode Local Web Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Code\\WebStorage",
+        "%APPDATA%\\Code\\Local Storage",
+        "%APPDATA%\\Code\\logs",
+        "%APPDATA%\\Code\\DawnGraphiteCache",
+        "%APPDATA%\\Code\\DawnWebGPUCache",
+        "%APPDATA%\\Code\\CachedProfilesData"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed NVIDIA App Backend Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\NVIDIA\\NvBackend",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA GeForce Experience\\CefCache\\Cache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA GeForce Experience\\CefCache\\Code Cache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA GeForce Experience\\CefCache\\GPUCache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA GeForce Experience\\CefCache\\VideoDecodeStats",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA Notification\\CefCache\\Cache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA Notification\\CefCache\\Code Cache",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA Notification\\CefCache\\GPUCache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed NVIDIA Local Logs Round 18",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA GeForce Experience",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NVIDIA Notification",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NvNode",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NvAbHub",
+        "%LOCALAPPDATA%\\NVIDIA Corporation\\NvTmRep"
+      ],
+      "Include": [
+        "*.log",
+        "*.log.*",
+        "*.bak",
+        "debug.log*",
+        "console.log*"
+      ],
+      "Recurse": true,
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed WPS Office6 Cache and Logs",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\office6\\cache",
+        "%APPDATA%\\Kingsoft\\office6\\update",
+        "%APPDATA%\\Kingsoft\\office6\\log",
+        "%APPDATA%\\Kingsoft\\office6\\wpsminisite"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Local Updater Pending Installers",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\cherrystudio-updater\\pending",
+        "%LOCALAPPDATA%\\quark-cloud-drive-updater\\pending"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Local Updater Installer Cache",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\cherrystudio-updater",
+        "%LOCALAPPDATA%\\eva-updater"
+      ],
+      "Include": [
+        "installer.exe"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed VSCode Downloaded Runtime Cache",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Code\\User\\globalStorage\\ms-dotnettools.vscode-dotnet-runtime"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Google Updater Logs and Crash Residuals Round 11",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\GoogleUpdater\\*\\Crashpad\\reports",
+        "%LOCALAPPDATA%\\Google\\GoogleUpdater\\*\\Crashpad\\attachments"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Google Updater Root Logs Round 11",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\GoogleUpdater"
+      ],
+      "Include": [
+        "updater.log",
+        "updater_history.jsonl"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed Thunder Updater Download Residuals Round 11",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%ProgramData%\\Thunder Network\\XLLiveUD\\Download"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed QQ Updater Residuals Round 11",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\QQ\\AuTemp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Quark Cloud Drive Network Logs Round 11",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\quark-cloud-drive\\ulog"
+      ],
+      "Include": [
+        "*.ulog",
+        "*.mmap*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed Chrome Metrics and Crash Attachments Round 12",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\BrowserMetrics",
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Crashpad\\attachments"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Chrome Crashpad Metrics Round 12",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Google\\Chrome\\User Data"
+      ],
+      "Include": [
+        "CrashpadMetrics*.pma"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed QQ Temp Image and Roam Residuals Round 12",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\QQ\\Temp\\qzone",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\RoamTemp",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\Images",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\Mso",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\gmm",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\PushTIM",
+        "%APPDATA%\\Tencent\\QQ\\Temp\\VASIconTmp"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Observed Doubao and Quark Metrics Residuals Round 14",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data\\BrowserMetrics",
+        "%LOCALAPPDATA%\\Doubao\\User Data\\DeferredBrowserMetrics",
+        "%LOCALAPPDATA%\\Quark\\User Data\\BrowserMetrics",
+        "%LOCALAPPDATA%\\Quark\\User Data\\DeferredBrowserMetrics"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Doubao Extension Cache Round 14",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Doubao\\User Data\\extensions_crx_cache",
+      "Risk": "Medium",
+      "RiskNote": "redownload_resources"
+    },
+    {
+      "Name": "Observed Quark Network and Crash Attachments Round 14",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Quark\\User Data\\Crashpad\\attachments"
+      ],
+      "Risk": "Low",
+      "RiskNote": "diagnostic_files"
+    },
+    {
+      "Name": "Observed Quark User Data Network Logs Round 14",
+      "Type": "file_pattern",
+      "Paths": [
+        "%LOCALAPPDATA%\\Quark\\User Data\\ulog"
+      ],
+      "Include": [
+        "*.ulog",
+        "*.mmap*"
+      ],
+      "Risk": "Low",
+      "RiskNote": "log_files"
+    },
+    {
+      "Name": "Observed Doubao Gecko Cache Resource Directories Round 15",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%LOCALAPPDATA%\\Doubao\\User Data\\gecko_cache\\*"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed Baidu Netdisk Root Temp Residuals Round 15",
+      "Type": "file_pattern",
+      "Paths": [
+        "%APPDATA%\\baidunetdisk"
+      ],
+      "Include": [
+        "*.tmp.node",
+        "*.tmp.ico"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "temporary_cache"
+    },
+    {
+      "Name": "Observed Quark Image Cache Round 16",
+      "Type": "directory_contents",
+      "Path": "%LOCALAPPDATA%\\Quark\\User Data\\Default\\image_cache",
+      "Risk": "Medium",
+      "RiskNote": "media_cache"
+    },
+    {
+      "Name": "Observed Tencent Embedded Web Cache Round 17",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Tencent\\WeChat\\xweb\\web_ng\\Cache",
+        "%APPDATA%\\Tencent\\WeChat\\xweb\\web_ng\\Code Cache",
+        "%APPDATA%\\Tencent\\WeChat\\wmpf_app\\WmpfCache",
+        "%APPDATA%\\Tencent\\QQ\\webkit_cache",
+        "%APPDATA%\\Tencent\\QQ\\WebKit\\Plugin\\Temp",
+        "%APPDATA%\\Tencent\\xwechat\\radium\\web\\profiles\\*\\Cache",
+        "%APPDATA%\\Tencent\\xwechat\\radium\\web\\profiles\\*\\Service Worker\\CacheStorage",
+        "%APPDATA%\\Tencent\\xwechat\\radium\\users\\*\\applet\\codecache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed WPS Embedded OfficeSpace Cache Round 17",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\office6\\homepage\\cef\\cache",
+        "%APPDATA%\\Kingsoft\\office6\\OfficeSpace\\*\\QingApp\\cachePath\\*\\Cache",
+        "%APPDATA%\\Kingsoft\\office6\\OfficeSpace\\*\\QingApp\\cachePath\\*\\GPUCache",
+        "%APPDATA%\\Kingsoft\\office6\\docers\\wps\\Cache",
+        "%APPDATA%\\Kingsoft\\office6\\docers\\wpp\\Cache"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    },
+    {
+      "Name": "Observed WPS Supplemental Cache Round 18",
+      "Type": "directory_glob_contents",
+      "Paths": [
+        "%APPDATA%\\Kingsoft\\office6\\docerFonts\\cache",
+        "%APPDATA%\\Kingsoft\\office6\\kugs\\qtcache",
+        "%APPDATA%\\Kingsoft\\office6\\konlinebullet\\download"
+      ],
+      "Risk": "Medium",
+      "RiskNote": "app_rebuild_cache"
+    }
+  ],
+  "scanOnly": [
+    {
+      "Name": "Downloads Installers Older Than 30 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.exe",
+        "*.msi",
+        "*.zip",
+        "*.7z",
+        "*.rar",
+        "*.iso"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 30,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Log and Dump Files Older Than 15 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.log",
+        "*.dmp",
+        "*.etl"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 15,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Disk Images Older Than 45 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.iso",
+        "*.img",
+        "*.vhd",
+        "*.vhdx"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 45,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Compressed Archives Older Than 45 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.zip",
+        "*.7z",
+        "*.rar",
+        "*.tar",
+        "*.gz",
+        "*.bz2",
+        "*.xz"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 45,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads App Packages Older Than 30 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.appx",
+        "*.appxbundle",
+        "*.msix",
+        "*.msixbundle",
+        "*.cab"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 30,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Debug Symbols and Traces Older Than 30 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.pdb",
+        "*.trace",
+        "*.wpetl",
+        "*.wer"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 30,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Video Files Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.mp4",
+        "*.mkv",
+        "*.avi",
+        "*.mov",
+        "*.wmv",
+        "*.flv",
+        "*.webm"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Large Data Files Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.bak",
+        "*.old",
+        "*.sql",
+        "*.sqlite",
+        "*.csv"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads VM and Emulator Packages Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ova",
+        "*.ovf",
+        "*.qcow2",
+        "*.vmdk",
+        "*.box"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Audio Files Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.mp3",
+        "*.flac",
+        "*.wav",
+        "*.aac",
+        "*.m4a",
+        "*.ogg"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Office and PDF Files Older Than 90 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.pdf",
+        "*.doc",
+        "*.docx",
+        "*.xls",
+        "*.xlsx",
+        "*.ppt",
+        "*.pptx"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 90,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Source and Package Files Older Than 45 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.nupkg",
+        "*.jar",
+        "*.war",
+        "*.apk",
+        "*.aab",
+        "*.whl",
+        "*.tar.gz"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 45,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads CAD and Design Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.psd",
+        "*.ai",
+        "*.sketch",
+        "*.dwg",
+        "*.dxf",
+        "*.blend"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Dataset and Backup Archives Older Than 90 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.parquet",
+        "*.feather",
+        "*.h5",
+        "*.hdf5",
+        "*.dump",
+        "*.backup"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 90,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Torrent and Metadata Files Older Than 30 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.torrent",
+        "*.nfo",
+        "*.sfv"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 30,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads 3D and Asset Packages Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.fbx",
+        "*.obj",
+        "*.stl",
+        "*.max",
+        "*.c4d",
+        "*.unitypackage"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Installer Bundles Older Than 45 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.dmg",
+        "*.pkg",
+        "*.deb",
+        "*.rpm",
+        "*.apk",
+        "*.appimage"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 45,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Project Archives Older Than 90 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.sln",
+        "*.vcxproj",
+        "*.csproj",
+        "*.xcodeproj",
+        "*.idea.zip",
+        "*.workspace.zip"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 90,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Raw Media and Camera Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.raw",
+        "*.cr2",
+        "*.nef",
+        "*.arw",
+        "*.dng",
+        "*.heic"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads VM and Container Images Older Than 90 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.qcow",
+        "*.qcow2",
+        "*.vdi",
+        "*.vmdk",
+        "*.vbox-extpack",
+        "*.tar"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 90,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Font and Asset Packs Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ttf",
+        "*.otf",
+        "*.woff",
+        "*.woff2",
+        "*.aseprite",
+        "*.abr"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Android and Mobile Backups Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ab",
+        "*.apks",
+        "*.xapk",
+        "*.ipa",
+        "*.ipsw"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Java and JVM Artifacts Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.jar",
+        "*.war",
+        "*.ear",
+        "*.jmod",
+        "*.jfr"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Container and Image Archives Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.tar",
+        "*.tar.xz",
+        "*.tar.bz2",
+        "*.oci",
+        "*.img"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Adobe and Creative Project Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.prproj",
+        "*.aep",
+        "*.psb",
+        "*.indd",
+        "*.idml",
+        "*.lrtemplate"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Database Dumps Older Than 90 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.sql.gz",
+        "*.sql.zip",
+        "*.dump.gz",
+        "*.bacpac",
+        "*.dmp",
+        "*.mdb"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 90,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Large Office Archives Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.pst",
+        "*.ost",
+        "*.accdb",
+        "*.onepkg",
+        "*.vsdx"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Build Outputs and Packages Older Than 60 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.dll",
+        "*.so",
+        "*.dylib",
+        "*.lib",
+        "*.a",
+        "*.whl",
+        "*.nupkg"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 60,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Ebooks and Documents Older Than 180 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.epub",
+        "*.mobi",
+        "*.azw3",
+        "*.chm",
+        "*.djvu"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 180,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads AI Models and Training Data Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.safetensors",
+        "*.ckpt",
+        "*.pt",
+        "*.pth",
+        "*.onnx",
+        "*.gguf"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Game Mods and Mod Packs Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.jar",
+        "*.mrpack",
+        "*.package",
+        "*.ts4script",
+        "*.esm",
+        "*.esp"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Firmware and Flash Packages Older Than 180 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ofp",
+        "*.ops",
+        "*.kdz",
+        "*.ftf",
+        "*.nb0",
+        "*.pac"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 180,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Scientific Data and Notebook Bundles Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ipynb",
+        "*.mat",
+        "*.rdata",
+        "*.sav",
+        "*.fits",
+        "*.nc"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads SDK and Toolchain Bundles Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.ndk",
+        "*.sdk",
+        "*.toolchain",
+        "*.exe",
+        "*.msixbundle"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Offline Maps and Resource Packs Older Than 180 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.map",
+        "*.mca",
+        "*.obb",
+        "*.pak",
+        "*.bundle",
+        "*.resource"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 180,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads System Backups and Recovery Images Older Than 180 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.gho",
+        "*.tib",
+        "*.mrimg",
+        "*.swm",
+        "*.wim",
+        "*.esd"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 180,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads GIS and Geodata Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.shp",
+        "*.shx",
+        "*.dbf",
+        "*.geojson",
+        "*.gpkg",
+        "*.osm.pbf"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Simulation and CAE Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.sim",
+        "*.fem",
+        "*.nas",
+        "*.cdb",
+        "*.inp",
+        "*.op2"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Dataset and ML Cache Files Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.npy",
+        "*.npz",
+        "*.tfrecord",
+        "*.lmdb",
+        "*.arrow",
+        "*.recordio"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Package Repositories and Mirrors Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.crate",
+        "*.gem",
+        "*.conda",
+        "*.vsix",
+        "*.crx",
+        "*.xpi"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Remote Sensing and Raster Data Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.tif",
+        "*.tiff",
+        "*.img",
+        "*.jp2",
+        "*.sid",
+        "*.dem"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads BIM and Construction Files Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.rvt",
+        "*.rfa",
+        "*.ifc",
+        "*.nwd",
+        "*.nwc",
+        "*.bim"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads EDA and PCB Packages Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.brd",
+        "*.sch",
+        "*.kicad_pcb",
+        "*.kicad_sch",
+        "*.fzz",
+        "*.step"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Offline Container and Registry Bundles Older Than 120 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.dockerbundle",
+        "*.ociarchive",
+        "*.tar.gz",
+        "*.tar.zst",
+        "*.img",
+        "*.sif"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 120,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Medical Imaging Files Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.dcm",
+        "*.nii",
+        "*.nii.gz",
+        "*.mhd",
+        "*.nrrd",
+        "*.mha"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Simulation Result Files Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.res",
+        "*.odb",
+        "*.fld",
+        "*.rst",
+        "*.out",
+        "*.plt"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Chip Design and Semiconductor Files Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.gds",
+        "*.gdsii",
+        "*.lef",
+        "*.lib",
+        "*.def",
+        "*.vcd"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Offline Model and Dataset Repositories Older Than 150 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.bin",
+        "*.index",
+        "*.msgpack",
+        "*.pt",
+        "*.safetensors",
+        "*.jsonl"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 150,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    },
+    {
+      "Name": "Downloads Map Tile and Terrain Packages Older Than 180 Days",
+      "Type": "file_pattern",
+      "Paths": [
+        "%USERPROFILE%\\Downloads"
+      ],
+      "Include": [
+        "*.mbtiles",
+        "*.terrain",
+        "*.hgt",
+        "*.dt2",
+        "*.dem",
+        "*.tpk"
+      ],
+      "Recurse": true,
+      "MinAgeDays": 180,
+      "Risk": "Medium",
+      "RiskNote": "manual_review_downloads"
+    }
+  ]
+}

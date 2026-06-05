@@ -1,0 +1,19 @@
+# Runtime exports
+exports/
+
+# Exported scan/log files
+system_disk_slim_log_*.txt
+system_disk_slim_scan_*.csv
+system_disk_slim_scan_*.json
+
+# Release packages / local packaged artifacts
+*.rar
+*.zip
+zip/
+
+# Windows noise
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
